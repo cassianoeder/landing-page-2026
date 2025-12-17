@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ederson Wermeier</title>
+
+  <!-- Google Font com estética "code" -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================
+       Reset básico
+       ========================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* =========================
+       Variáveis de tema
+       ========================= */
+    :root {
+      --bg-color: #000000;
+      --text-color: #ffffff;
+      --accent-color: #ffffff;
+      --muted-color: #9ca3af;
+    }
+
+    /* =========================
+       Corpo da página
+       ========================= */
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* =========================
+       Container principal
+       ========================= */
+    .container {
+      text-align: center;
+      padding: 2rem;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    /* =========================
+       Nome principal
+       ========================= */
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 1rem;
+    }
+
+    /* =========================
+       Descrição curta
+       ========================= */
+    .subtitle {
+      font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+      font-weight: 300;
+      color: var(--muted-color);
+      margin-bottom: 3rem;
+    }
+
+    /* =========================
+       Ações / links
+       ========================= */
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--text-color);
+      border: 1px solid var(--accent-color);
+      padding: 0.75rem 1.75rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.25s ease-in-out;
+    }
+
+    a:hover {
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+    }
+
+    /* =========================
+       Rodapé discreto
+       ========================= */
+    footer {
+      position: fixed;
+      bottom: 1.5rem;
+      width: 100%;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--muted-color);
+    }
+
+    /* =========================
+       Responsividade fina
+       ========================= */
+    @media (max-width: 480px) {
+      .actions {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>Ederson Wermeier</h1>
+    <p class="subtitle">
+      Redes & Infraestrutura · 9+ anos de experiência · Python Developer
+    </p>
+
+    <div class="actions">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+        Instagram
+      </a>
+
+      <a href="https://academy.edersonwermeier.com" target="_blank" rel="noopener noreferrer">
+        Academy
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Ederson Wermeier
+  </footer>
+
+  <script>
+    // Atualiza automaticamente o ano do rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
